@@ -167,4 +167,4 @@ cython_debug/
 /weights/
 /datasets/
 /ov_segment/MaskCLIP/
-/ov_segment/SAN/
+# /ov_segment/SAN/
