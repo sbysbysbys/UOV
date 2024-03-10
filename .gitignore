@@ -166,8 +166,4 @@ cython_debug/
 /superpixels/
 /weights/
 /datasets/
-<<<<<<< HEAD
 /ov_segment/
-=======
-/ov_segment/
->>>>>>> 02c4672bb9b9ca62b43b72ee9212e2be9d957f21
