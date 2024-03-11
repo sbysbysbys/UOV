@@ -169,4 +169,9 @@ datasets/
 ov_segment/MaskCLIP/
 config/annotation_free_maskclip.yaml
 config/slidr_voxelnet.yaml
-
+!ov_segment/CAT-Seg/cat_seg/data/datasets/
+!ov_segment/CAT-Seg/datasets/
+!ov_segment/SAN/datasets/
+!ov_segment/SAN/san/data/datasets/
+!ov_segment/fc-clip/datasets/
+!ov_segment/fc-clip/fcclip/data/datasets/
