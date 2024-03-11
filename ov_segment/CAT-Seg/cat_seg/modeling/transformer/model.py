@@ -541,7 +541,7 @@ class Aggregator(nn.Module):
         window_size=12,
         attention_type='linear',
         prompt_channel=80,
-        sp_folder="/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels"
+        # sp_folder="data/CAT-Seg/superpixels"
     ) -> None:
         super().__init__()
         self.num_layers = num_layers
@@ -577,7 +577,7 @@ class Aggregator(nn.Module):
         self.decoder2 = Up(decoder_dims[0], decoder_dims[1], decoder_guidance_proj_dims[1])
         self.head = nn.Conv2d(decoder_dims[1], 1, kernel_size=3, stride=1, padding=1)
 
-        self.sp_folder = sp_folder
+        # self.sp_folder = sp_folder
 
     def feature_map(self, img_feats, text_feats):
         img_feats = F.normalize(img_feats, dim=1) # B C H W

@@ -113,7 +113,7 @@ def get_parser():
     )
     parser.add_argument(
         "--root_folder",
-        default='/root/wangfeiyue3new/sby/Segment-Any-Point-Cloud/data/sets/nuscenes',
+        default='../data/sets/nuscenes',
     )
     parser.add_argument(
         "--sp_folder",
@@ -169,7 +169,7 @@ if __name__ == "__main__":
     ]
 
     total_score = len(nusc.scene)
-    num_segments = 5
+    num_segments = 1
     average_score = total_score // num_segments
     remainder = total_score % num_segments
     segments = [average_score + 1 if i < remainder else average_score for i in range(num_segments)]
@@ -183,7 +183,7 @@ if __name__ == "__main__":
     text_len = len(metadata.stuff_classes)
 
     random_select_idx = 0 
-    cycle = 1000
+    cycle = 1
 
     # with open("nuscenes_pics.txt", "a")as f:
     # for scene_idx in tqdm(range(segments[cuda_num-3], segments[cuda_num-2])):
