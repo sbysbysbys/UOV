@@ -3,10 +3,10 @@ working_dir : "output/slidr/nuscenes/"
 
 # SAN
 text_number : 175
-lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/SAN/lidarseg_ov"
-text_embedding_path : "/root/wangfeiyue3new/sby/.data/SAN/superpixels/4text_embedding.pt"
+lidarseg_ov_dir : "data/SAN/lidarseg_ov"
+text_embedding_path : "data/SAN/superpixels/text_embedding.pt"
 feature_dim : 768
-sp_dir : "/root/wangfeiyue3new/sby/.data/SAN/superpixels"
+sp_dir : "data/SAN/superpixels"
 superpixels_type : "SAN" 
 model_n_out : 768           
 alpha_i : 0.5

@@ -90,12 +90,12 @@ class SemanticKITTIDataset(Dataset):
         for num in phase_set:
             directory = next(
                 os.walk(
-                    f"datasets/semantic_kitti/dataset/sequences/{num:0>2d}/velodyne"
+                    f"data/sets/SemanticKITTI/dataset/sequences/{num:0>2d}/velodyne"
                 )
             )
             self.list_files.extend(
                 map(
-                    lambda x: f"datasets/semantic_kitti/dataset/sequences/"
+                    lambda x: f"data/sets/SemanticKITTI/dataset/sequences/"
                     f"{num:0>2d}/velodyne/" + x,
                     directory[2],
                 )

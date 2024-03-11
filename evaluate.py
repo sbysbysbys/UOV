@@ -13,10 +13,10 @@ def main():
     """
     parser = argparse.ArgumentParser(description="arg parser")
     parser.add_argument(
-        "--cfg_file", type=str, default="/root/wangfeiyue3new/sby/SLidR/config/semseg_nuscenes_zeroshot.yaml", help="specify the config for training"
+        "--cfg_file", type=str, default="config/semseg_nuscenes_zeroshot.yaml", help="specify the config for training"
     )
     parser.add_argument(
-        "--resume_path", type=str, default="/root/wangfeiyue3new/sby/SLidR/output/semseg/nuscenes/fc-clip_pretrain_epoch201_label_free/9model.pt", help="provide a path to resume an incomplete training"
+        "--resume_path", type=str, default="", help="provide a path to resume an incomplete training"
     )
     parser.add_argument(
         "--dataset", type=str, default="nuScenes", help="Choose between nuScenes and KITTI"

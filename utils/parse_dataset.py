@@ -8,7 +8,7 @@ if __name__ == "__main__":
     File used to generate the parametrizing splits
     """
     nusc = NuScenes(
-        version="v1.0-trainval", dataroot="datasets/nuscenes/", verbose=True
+        version="v1.0-trainval", dataroot="data/sets/nuscenes/", verbose=True
     )
     phase_scenes = create_splits_scenes()["train"]
     n_rain = 0

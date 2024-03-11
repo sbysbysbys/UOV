@@ -140,7 +140,7 @@ class NuScenesMatchDatasetSpconv(Dataset):
             self.nusc = kwargs["cached_nuscenes"]
         else:
             self.nusc = NuScenes(
-                version="v1.0-trainval", dataroot="datasets/nuscenes", verbose=False
+                version="v1.0-trainval", dataroot="data/sets/nuscenes", verbose=False
             )
 
         self.list_keyframes = []

@@ -117,7 +117,7 @@ def get_parser():
     )
     parser.add_argument(
         "--sp_folder",
-        default="/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels_random",
+        default="data/CAT-Seg/superpixels",
         help="A file or directory to save sp_folder visualizations. "
         "If not given, will show sp_folder in an OpenCV window.",
     )
@@ -131,7 +131,7 @@ def get_parser():
     parser.add_argument(
         "--opts",
         help="Modify config options using the command-line 'KEY VALUE' pairs",
-        default=['MODEL.WEIGHTS', '/root/wangfeiyue3new/sby/.model/model_final_large.pth'],
+        default=['MODEL.WEIGHTS', 'model_final_large.pth'],
         # default=[],
         nargs=argparse.REMAINDER,
     )
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     segments = [0] + segments
     cuda_num = args.cuda
 
-    text_embed_path = os.path.join(args.sp_folder, str(cuda_num) + "text_embedding.pt")
+    text_embed_path = os.path.join(args.sp_folder, "text_embedding.pt")
     metadata = metadata_nuscenes_dic()
     text_len = len(metadata.stuff_classes)
 

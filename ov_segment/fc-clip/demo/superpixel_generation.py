@@ -151,7 +151,7 @@ if __name__ == "__main__":
     segments = [0] + segments
     cuda_num = args.cuda
 
-    text_embed_path = os.path.join(args.sp_folder, str(cuda_num) + "text_embedding.pt")
+    text_embed_path = os.path.join(args.sp_folder, "text_embedding.pt")
 
     for scene_idx in tqdm(range(segments[cuda_num], segments[cuda_num+1])):
     # for scene_idx in tqdm(range(total_score)):

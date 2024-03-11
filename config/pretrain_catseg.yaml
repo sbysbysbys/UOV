@@ -3,10 +3,10 @@ working_dir : "output/slidr/nuscenes/"
 
 # catseg
 text_number : 175
-lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/lidarseg_ov"
-text_embedding_path : "/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels/4text_embedding.pt"
+lidarseg_ov_dir : "data/CAT-Seg/lidarseg_ov"
+text_embedding_path : "data/CAT-Seg/superpixels/text_embedding.pt"
 feature_dim : 768
-sp_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels"
+sp_dir : "data/CAT-Seg/superpixels"
 superpixels_type : "CAT-Seg" 
 model_n_out : 768           
 alpha_i : 0.5

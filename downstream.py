@@ -27,11 +27,7 @@ def main():
     parser.add_argument(
         "--pretraining_path", type=str, default="minkunet_slidr.pt", help="provide a path to pre-trained weights"
     )
-    # --pretraining_path
-    # "minkunet_slidr.pt"
-    # "/root/wangfeiyue3new/sby/SLidR/output/slidr/nuscenes/fcclip55_weight28_power1_epoch2_withtextsimm/lightning_logs/version_0/checkpoints/epoch=1-step=12055.ckpt"
-    # "/root/wangfeiyue3new/sby/SLidR/output/slidr/nuscenes/fcclip37_weight28_power1_epoch2_withtextsimm/lightning_logs/version_0/checkpoints/epoch=1-step=12055.ckpt"
-    # "/root/wangfeiyue3new/sby/SLidR/output/slidr/nuscenes/fcclip55_weight28_power1_epoch20_withtextsimm/3model.pt"
+
     args = parser.parse_args()
     config = generate_config(args.cfg_file)
     if args.resume_path:

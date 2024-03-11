@@ -137,10 +137,8 @@ def post_process(point_nn, cfg, pc, output_seg = None, ov_seg = None, text_embed
 def get_arguments():
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default="/root/wangfeiyue3new/sby/SLidR/config/semseg_nuscenes_zeroshot.yaml")
-    parser.add_argument('--sp_folder', type=str, default="/root/wangfeiyue3new/sby/.data/SLidr/fcclip")
-    # "/root/wangfeiyue3new/sby/.data/SLidr/baseline_pp"
-    # "/root/wangfeiyue3new/sby/.data/SLidr/fcclip_pretrain_labelfree_pp"
+    parser.add_argument('--config', type=str, default="config/semseg_nuscenes_zeroshot.yaml")
+    parser.add_argument('--sp_folder', type=str, default="data/SLidr/fcclip")
     parser.add_argument('--post_process', type=str)
     parser.add_argument('--dataset', type=str)  # 71.27, 73.95
 

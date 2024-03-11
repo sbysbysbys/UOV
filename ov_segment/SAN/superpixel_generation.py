@@ -177,7 +177,7 @@ class Predictor(object):
 
         # random_select_idx = 0 
         # cycle = 1000
-        text_embed_path = os.path.join(sp_folder, str(cuda_num) + "text_embedding.pt")
+        text_embed_path = os.path.join(sp_folder, "text_embedding.pt")
 
         # for scene_idx in tqdm(range(segments[cuda_num-4], segments[cuda_num-3])):
         for scene_idx in tqdm(range(total_score)):

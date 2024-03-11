@@ -18,16 +18,15 @@ def main():
     """
     parser = argparse.ArgumentParser(description="arg parser")
     parser.add_argument(
-        "--cfg_file", type=str, default="config/semseg_nuscenes_zeroshot.yaml", help="specify the config for training"
+        "--cfg_file", type=str, default="", help="specify the config for training"
     )
     parser.add_argument(
         "--resume_path", type=str, default=None, help="provide a path to resume an incomplete training"
     )
     parser.add_argument(
-        "--pretraining_path", type=str, default="/root/wangfeiyue3new/sby/.model/minkunet_slidr.pt", help="provide a path to pre-trained weights"
+        "--pretraining_path", type=str, default="", help="provide a path to pre-trained weights"
     )
-    # --pretraining_path
-    # "/root/wangfeiyue3new/sby/SLidR/output/slidr/nuscenes/fcclip55_weight28_power1_epoch20_withtextsimm/19model.pt"
+
     args = parser.parse_args()
     config = generate_config(args.cfg_file)
     if args.resume_path:

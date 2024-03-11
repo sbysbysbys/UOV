@@ -177,3 +177,4 @@ config/slidr_voxelnet.yaml
 !ov_segment/fc-clip/fcclip/data/datasets/
 CAT-Seg/cat_seg/data/datasets/__init__.py
 config/prertain_slidr.yaml
+ov_segment/fc-clip/demo/superpixel_generation_random.py

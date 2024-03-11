@@ -184,11 +184,11 @@ class NuScenesDataset(Dataset):
                 self.nusc = cached_nuscenes
             else:
                 self.nusc = NuScenes(
-                    version="v1.0-trainval", dataroot="datasets/nuscenes", verbose=False
+                    version="v1.0-trainval", dataroot="data/sets/nuscenes", verbose=False
                 )
         else:
             self.nusc = NuScenes(
-                version="v1.0-test", dataroot="datasets/nuscenes", verbose=False
+                version="v1.0-test", dataroot="data/sets/nuscenes", verbose=False
             )
 
         self.list_tokens = []

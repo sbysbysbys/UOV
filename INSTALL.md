@@ -31,6 +31,6 @@ conda install pytorch-scatter -c pyg
 pip install -r requirements.txt
 # for fc-clip
 pip install git+https://github.com/mlfoundations/open_clip.git --prefer-binary
-cd ov_segment/fcclip/modeling/pixel_decoder/ops
+cd ov_segment/fc-clip/fcclip/modeling/pixel_decoder/ops
 sh make.sh
 ```

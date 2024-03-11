@@ -3,10 +3,10 @@ working_dir : "output/slidr/nuscenes/"
 
 # fcclip
 text_number : 175
-lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/fc-clip/lidarseg_ov"
-text_embedding_path : "/root/wangfeiyue3new/sby/.data/fc-clip/superpixels/0text_embedding.pt"
+lidarseg_ov_dir : "data/fc-clip/lidarseg_ov"
+text_embedding_path : "data/fc-clip/superpixels/text_embedding.pt"
 feature_dim : 768
-sp_dir : "/root/wangfeiyue3new/sby/.data/fc-clip/superpixels"
+sp_dir : "data/fc-clip/superpixels"
 superpixels_type : "fc-clip" 
 model_n_out : 768 
 alpha_i : 0.5

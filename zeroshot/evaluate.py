@@ -5,9 +5,6 @@ from tqdm import tqdm
 from copy import deepcopy
 from MinkowskiEngine import SparseTensor
 from utils.metrics import compute_IoU
-# import sys
-# sys.path.append('/root/wangfeiyue3new/sby/post_process')
-# from post_process import get_point_nn, post_process
 
 
 CLASSES_NUSCENES = [
@@ -90,7 +87,7 @@ def evaluate(model, dataloader, config, save=False):
                 #     point_labels, _ = post_process(point_nn, config, pc, output_seg, ov_seg)
                 #     predictions = point_labels.squeeze(0).cpu()
 
-                if save and i%100 == 0: 
+                if save and i%1 == 0: 
                     lidarseg_filename = batch["lidarseg_filename"][j].replace(".bin", ".npy")
                     # print(lidarseg_filename)
                     pc = batch["pc"][j]
