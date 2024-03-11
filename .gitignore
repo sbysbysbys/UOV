@@ -178,3 +178,5 @@ config/slidr_voxelnet.yaml
 CAT-Seg/cat_seg/data/datasets/__init__.py
 config/prertain_slidr.yaml
 ov_segment/fc-clip/demo/superpixel_generation_random.py
+data/sets/SemanticKITTI
+data/sets/nuscenes
