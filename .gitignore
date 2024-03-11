@@ -161,10 +161,12 @@ cython_debug/
 
 
 # SSOV
-/output/
-/superpoint_evaluate/
-/superpixels/
-/weights/
-/datasets/
-/ov_segment/MaskCLIP/
-# /ov_segment/SAN/
+output/
+superpoint_evaluate/
+superpixels/
+weights/
+datasets/
+ov_segment/MaskCLIP/
+config/annotation_free_maskclip.yaml
+config/slidr_voxelnet.yaml
+

@@ -1,11 +1,10 @@
 dataset : "nuscenes"
 working_dir : "output/semseg/nuscenes/"
 
-# which kind of superpixels to use
-superpixels_type : "fcclip"                    # 
-sp_dir : "/root/wangfeiyue3new/sby/.data/fc-clip/superpixels/"
-lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/fc-clip/lidarseg_ov"
-
+superpixels_type : "fcclip"
+sp_dir : "data/fc-clip/superpixels/"
+lidarseg_ov_dir : "data/fc-clip/lidarseg_ov"
+pp_save_path : "data/SLidr/fcclip"
 
 task : "zero-shot"  # finetune
 # task : "finetune"
@@ -80,9 +79,8 @@ model_n_out : 17
 ignore_index : 0
 normalize_features : False
 
-pp_save_path : "/root/wangfeiyue3new/sby/.data/SLidr/fcclip"
 post_process : True
-if_ovseg : True
+if_ovseg : False
 cuda : 2
 # params
 beta : 4

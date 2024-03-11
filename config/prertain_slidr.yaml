@@ -1,45 +1,11 @@
 dataset : "nuscenes"
 working_dir : "output/slidr/nuscenes/"
 
-# which kind of superpixels to use
-# fcclip
-# text_number : 175
-# lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/fc-clip/lidarseg_ov"
-# text_embedding_path : "/root/wangfeiyue3new/sby/.data/fc-clip/superpixels/0text_embedding.pt"
-# feature_dim : 768
-# sp_dir : "/root/wangfeiyue3new/sby/.data/fc-clip/superpixels"
-# superpixels_type : "fc-clip" 
-# model_n_out : 768           
-# alpha_i : 0.5
-# alpha_t : 0.5
+sp_dir : "/root/wangfeiyue3new/sby/SLidR/superpixels/nuscenes/superpixels_slic/"
+superpixels_type : "slic" 
+model_n_out : 64     
 
-# SAN
-text_number : 175
-lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/SAN/lidarseg_ov"
-text_embedding_path : "/root/wangfeiyue3new/sby/.data/SAN/superpixels/4text_embedding.pt"
-feature_dim : 768
-sp_dir : "/root/wangfeiyue3new/sby/.data/SAN/superpixels"
-superpixels_type : "slic"   # "SAN" 
-model_n_out : 768           
-alpha_i : 0.5
-alpha_t : 0.5
-
-# catseg
-# text_number : 175
-# lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/lidarseg_ov"
-# text_embedding_path : "/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels/4text_embedding.pt"
-# feature_dim : 768
-# sp_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels"
-# superpixels_type : "CAT-Seg" 
-# model_n_out : 768           
-# alpha_i : 0.5
-# alpha_t : 0.5
-
-# sp_dir : "/root/wangfeiyue3new/sby/SLidR/superpixels/nuscenes/superpixels_slic/"
-# superpixels_type : "slic"    # "slic"--64  "fc-clip"--768
-# model_n_out : 64     
-
-num_epochs : 20
+num_epochs : 40
 # number of GPUs and CPU threads to use
 num_gpus : 4
 

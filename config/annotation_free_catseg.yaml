@@ -1,10 +1,10 @@
 dataset : "nuscenes"
 working_dir : "output/semseg/nuscenes/"
 
-superpixels_type : "catseg"               #
-sp_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels/"
-lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/lidarseg_ov"
-
+superpixels_type : "catseg"
+sp_dir : "data/CAT-Seg/superpixels/"
+lidarseg_ov_dir : "data/CAT-Seg/lidarseg_ov"
+pp_save_path : "data/SLidr/catseg"
 
 task : "zero-shot"  # finetune
 # task : "finetune"
@@ -79,9 +79,8 @@ model_n_out : 17
 ignore_index : 0
 normalize_features : False
 
-pp_save_path : "/root/wangfeiyue3new/sby/.data/SLidr/catseg"
 post_process : True
-if_ovseg : True
+if_ovseg : False
 cuda : 2
 # params
 beta : 4

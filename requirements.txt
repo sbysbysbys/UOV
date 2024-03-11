@@ -12,7 +12,7 @@ scipy == 1.10.1
 ftfy == 6.1.1
 opencv-python == 4.5.1.48
 setuptools == 59.5.0
-imageio == 2.4.1
+imageio == 2.32.0
 timm == 0.9.12
 regex
 einops

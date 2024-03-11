@@ -4,7 +4,7 @@ The code provided is compatible with [nuScenes](https://www.nuscenes.org/lidar-s
 Put the datasets you intend to use in the datasets folder.
 
 ```
-mkdir datasets
+mkdir -p data/sets/
 ```
 
 ## nuScenes

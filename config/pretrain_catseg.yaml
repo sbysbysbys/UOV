@@ -1,36 +1,38 @@
 dataset : "nuscenes"
-working_dir : "output/semseg/nuscenes/"
+working_dir : "output/slidr/nuscenes/"
 
+# catseg
+text_number : 175
+lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/lidarseg_ov"
+text_embedding_path : "/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels/4text_embedding.pt"
+feature_dim : 768
+sp_dir : "/root/wangfeiyue3new/sby/.data/CAT-Seg/superpixels"
+superpixels_type : "CAT-Seg" 
+model_n_out : 768           
+alpha_i : 0.5
+alpha_t : 0.5   
 
-superpixels_type : "maskclip"        # 
-sp_dir : "/root/wangfeiyue3new/sby/.data/maskclip/superpixels/"
-lidarseg_ov_dir : "/root/wangfeiyue3new/sby/.data/maskclip/lidarseg_ov"
+num_epochs : 40
+# number of GPUs and CPU threads to use
+num_gpus : 4
 
-
-task : "zero-shot"  # finetune
-# task : "finetune"
 # if set to True, use cylindrical coordinates, otherwise use cartesian
 cylindrical_coordinates : True
 # size of the voxel in each dimension for cartesian coordinates,
 # and in rho and z for cylindrical (angular is always 1°)
 voxel_size : 0.1
-batch_size : 16        # -->16 change here
+batch_size : 4
 # learning rate
-optimizer : 'sgd'
-scheduler : 'cosine'
-lr : 0.02             
-lr_head : 2.0           
+lr : 0.5
 sgd_momentum : 0.9
 sgd_dampening : 0.1
 weight_decay : 0.0001
-weight_decay_head : Null
-num_epochs : 10   # 100    # -->50
-# number of GPUs and CPU threads to use
-num_gpus : 1   # 1       # -->4
+# used in superpixel loss only, drop points and pixels from the computation of the loss
+dropout : 0.
+
 num_threads : 4
-# 3D convolution kernel size
 kernel_size : 3
-bn_momentum : 0.02
+
 bn_momentum : 0.05
 crop_size : [224, 416]
 crop_ratio : [1.5555555555555556, 1.8888888888888888]
@@ -50,13 +52,8 @@ NCE_temperature : 0.07
 # number of positive matches in the InfoNCE loss
 num_matches : 4096
 # whether to use the true validation set or the custom parametrization set
-training : "validate"       # -->'parametrize'
-# training : "parametrize"
-# lovasz is actually a sum of both losses
-loss : "lovasz"  # "crossentropy"
-# use the frozen backbone setup
-freeze_layers : False
-# transformations to apply
+training : "parametrize"
+# transformations to apply to the clouds
 transforms_clouds : ["Rotation", "FlipAxis"]
 # transformations to apply to both the clouds and the images among:
 # 'FlipHorizontal', 'DropCuboids', 'ResizedCrop'
@@ -65,48 +62,12 @@ transforms_mixed : ["DropCuboids", "ResizedCrop", "FlipHorizontal"]
 # loss_per_scene, loss_superpixels, loss_superpixels_reduce,
 # loss_superpixels_reduce_all, loss_superpixels_transforms
 losses : ["loss_superpixels_average"]
-# only keep 1 in dataset_skip_step training examples (here use 1% of the data)
-dataset_skip_step : 1  
-# path to the pretraining weights to use. None is random initialization
-pretraining_path : Null
-# path to downstream weights to continue a previous training
+# only keep 1 in dataset_skip_step training examples (here use 100% of the data)
+dataset_skip_step : 1
+# path to weights to continue a previous training
 resume_path : Null
-# Where to log results for evaluate
-log_evaluate : Null
 
 # WARNING: DO NOT CHANGE THE FOLLOWING PARAMETERS
 # ===============================================
-model_n_out : 17
-ignore_index : 0
-normalize_features : False
-
-pp_save_path : "/root/wangfeiyue3new/sby/.data/SLidr/maskclip"
-post_process : True
-if_ovseg : False
-cuda : 2
-# params
-beta : 4
-samep_dist : 20
-
-# pointnn
-dataset : 'nuscenes'
-del_max_distance : 5
-pp_batch_size : 1
-points : 4096    # 4096
-stages : 4    # 6
-# freature dim
-dim : 17
-# k neighber
-k : 20
-# propagate neighbors in decoder
-de_k : 6
-# min cluster size
-alpha : 0
-# cluster number
-beta2 : 20
-# min drift
-gamma : 0.995   # 5.7°
-# downsampling rate
-delta : 3
-
-
+normalize_features : True
+superpixel_size : 150
