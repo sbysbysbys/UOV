@@ -55,7 +55,8 @@ For example:
 # annotation-free
 python annotation_free.py --cfg_file "config/annotation_free_san.yaml" --pretraining_path "SSOV_pretrain_san.pt"
 ```
-Or, we use --pretraining_path ["minkunet_slidr.pt"](https://github.com/valeoai/SLidR) as baseline.
+We use --pretraining_path ["minkunet_slidr.pt"](https://github.com/valeoai/SLidR) as baseline.
+
 You can change ```$training : 'parametrize'``` for pretraining.
 
 
