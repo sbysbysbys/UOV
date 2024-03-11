@@ -355,8 +355,8 @@ class Predictor(object):
                 area = torch.where(inverse_indices[:, :]==i)
                 area_size = area[0].shape[0]
                 sinfo[-1]["area"] = area_size
-                # area_feature = F.normalize(torch.sum(image_emb[area], dim=0), dim=0)
-                area_feature = image_emb[inds[i]]
+                area_feature = F.normalize(torch.sum(image_emb[area], dim=0), dim=0)
+                # area_feature = image_emb[inds[i]]
                 mask_emb = torch.cat((mask_emb, area_feature.reshape(1, -1)), dim=0)
                 # import pdb; pdb.set_trace()
             else:
@@ -387,11 +387,11 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--model_path", type=str, help="path to model file",
-        default="/root/wangfeiyue3/sby/.model/san_vit_large_14.pth"
+        default="san_vit_large_14.pth"
     )
     parser.add_argument(
         "--root_dir", type=str, help="path to image file.",
-        default='/root/wangfeiyue3new/sby/Segment-Any-Point-Cloud/data/sets/nuscenes',
+        default='../../data/sets/nuscenes',
     )
     parser.add_argument("--aug-vocab", 
         action="store_true", 
@@ -405,7 +405,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--sp_folder",
-        default="/root/wangfeiyue3new/sby/.data/SAN/superpixels_2",
+        default="../../data/SAN/superpixels",
         help="A file or directory to save sp_folder visualizations. "
         "If not given, will show sp_folder in an OpenCV window.",
     )

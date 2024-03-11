@@ -185,11 +185,11 @@ def parse_arguments():
 
     parser = argparse.ArgumentParser(description='superpixel2superpoint')
     parser.add_argument('-r', '--root_folder', help='root folder of dataset',
-                        default='/root/wangfeiyue3new/sby/Segment-Any-Point-Cloud/data/sets/nuscenes')
+                        default='../../data/sets/nuscenes')
     parser.add_argument('-s', '--sp_folder', help='superpixels root', type=str,
-                        default='/root/wangfeiyue3new/sby/.data/maskclip/superpixels') 
+                        default='../../data/SAN/superpixels') 
     parser.add_argument('-l', '--lidarseg_save_folder', help='save lidarseg', type=str,
-                        default='/root/wangfeiyue3new/sby/.data/maskclip/lidarseg_ov') 
+                        default='../../data/SAN/lidarseg_ov') 
     arguments = parser.parse_args()
 
     return arguments
@@ -241,11 +241,3 @@ if __name__ == "__main__":
             all_check = 0
         if all_check:
             p_sameseg, p_labeled = map_pointcloud_to_image(lidar_token, args.sp_folder, args = args, if_save = True)
-            ps.append(p_sameseg)
-            pl.append(p_labeled)
-            print(p_sameseg, p_labeled)
-    
-    print("p_avg_sameseg =", sum(ps)/len(ps))
-    print("p_avg_labeled =", sum(pl)/len(pl))
-
-            

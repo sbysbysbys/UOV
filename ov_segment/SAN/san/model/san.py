@@ -247,9 +247,9 @@ class SAN(nn.Module):
                 mask_pred = mask_pred_result.sigmoid()
                 mask_cls_argmax = (mask_cls.argmax(dim=1)).unsqueeze(-1).repeat(1, mask_emb_per_image.shape[-1])
                 r = torch.einsum("qc,qhw->chw", mask_cls, mask_pred)
-                # image_emb = torch.einsum("qd,qhw->dhw", mask_emb_per_image, mask_pred).permute(1,2,0)
-                image_emb = torch.zeros(mask_cls.shape[-1], mask_emb_per_image.shape[-1]).to(mask_emb_per_image.device)
-                image_emb = F.normalize(F.normalize(image_emb.scatter_add_(0, mask_cls_argmax, mask_emb_per_image), dim=-1) + 0.1 * text_emb)
+                image_emb = torch.einsum("qd,qhw->dhw", mask_emb_per_image, mask_pred).permute(1,2,0)
+                # image_emb = torch.zeros(mask_cls.shape[-1], mask_emb_per_image.shape[-1]).to(mask_emb_per_image.device)
+                # image_emb = F.normalize(F.normalize(image_emb.scatter_add_(0, mask_cls_argmax, mask_emb_per_image), dim=-1) + 0.1 * text_emb)
                 if not self.sem_seg_postprocess_before_inference:
                     r = retry_if_cuda_oom(sem_seg_postprocess)(
                         r, image_size, height, width

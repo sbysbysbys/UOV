@@ -1,9 +1,0 @@
-cython
-scipy
-shapely
-timm
-h5py
-submitit
-scikit-image
-opencv-python-headless
-open_clip_torch
