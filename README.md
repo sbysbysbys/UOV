@@ -57,23 +57,33 @@ python annotation_free.py --cfg_file "config/annotation_free_san.yaml" --pretrai
 ```
 We use --pretraining_path ["minkunet_slidr.pt"](https://github.com/valeoai/SLidR) as baseline.
 
-You can change ```$training : 'parametrize'``` for pretraining.
+Or, you can change ```$training : 'parametrize'``` in config/annotation_free_XXX.yaml for pretraining.
 
 
 ### Finetuning
 For example:
 ```
 # finetune (SSOV-TMP)
-python downstream.py --cfg_file "config/annotation_free_san.yaml" --pretraining_path "SSOV_pretrain_san.pt"
+python downstream.py --cfg_file "config/semseg_nuscenes.yaml" --pretraining_path "SSOV_pretrain_san.pt"
 # or (SSOV)
-python downstream.py --cfg_file "config/annotation_free_san.yaml" --pretraining_path "SSOV_pretrain_with_af_san.pt"
+python downstream.py --cfg_file "config/semseg_nuscenes.yaml" --pretraining_path "SSOV_pretrain_with_af_san.pt"
+# SemanticKITTI
+python downstream.py --cfg_file "config/semseg_kitti.yaml" --pretraining_path "SSOV_pretrain_with_af_san.pt"
+
+Or, you can change:
 ```
+dataset_skip_step : 1
+freeze_layers : True
+lr : 0.05
+lr_head : Null
+```
+in config/semseg_nuscenes.yaml for linear probing.
 
 ### Evaluation
 For example:
 ```
 # evaluate
-
+python evaluate.py --cfg_file "config/annotation_free_san.yaml" --resume_path "SSOV_af_with_pretrain_san.pt"
 ```
 
 

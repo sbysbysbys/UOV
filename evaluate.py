@@ -13,7 +13,7 @@ def main():
     """
     parser = argparse.ArgumentParser(description="arg parser")
     parser.add_argument(
-        "--cfg_file", type=str, default="config/semseg_nuscenes_zeroshot.yaml", help="specify the config for training"
+        "--cfg_file", type=str, default="", help="specify the config for training"
     )
     parser.add_argument(
         "--resume_path", type=str, default="", help="provide a path to resume an incomplete training"
