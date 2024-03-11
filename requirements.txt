@@ -3,7 +3,8 @@
 nuscenes-devkit == 1.1.9
 # copy
 tqdm
-pytorch_lightning == 1.6.0
+torchmetrics == 0.6.0
+pytorch_lightning == 1.4.0
 pyquaternion
 # multiprocessing
 scikit-image == 0.21.0

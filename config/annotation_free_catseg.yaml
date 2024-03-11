@@ -23,7 +23,7 @@ sgd_momentum : 0.9
 sgd_dampening : 0.1
 weight_decay : 0.0001
 weight_decay_head : Null
-num_epochs : 10   # 100    # -->50
+num_epochs : 30   # 100    # -->50
 # number of GPUs and CPU threads to use
 num_gpus : 1   # 1       # -->4
 num_threads : 4

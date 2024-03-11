@@ -31,7 +31,7 @@ def main():
     if config["superpixels_type"] == "slic":
         from pretrain.lightning_trainer_spconv import LightningPretrainSpconv
         from pretrain.lightning_trainer import LightningPretrain
-        from pretrain.lightning_datamodule import PretrainDataModule  # 0224
+        from pretrain.lightning_datamodule import PretrainDataModule 
         dm = PretrainDataModule(config)
         model_points, model_images = make_model(config)
         if config["num_gpus"] > 1:
