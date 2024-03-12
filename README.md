@@ -10,6 +10,7 @@ SSOV consists of two stages: Tri-Modal Pre-training (TMP) and Annotation-free tr
 <p align="center">
   <img src="./assets/demo.gif" width="75%" />
 </p>
+More demos can be found at [this dir](./assets/demo.gif)
 
 ## Installation
 Please follow [installation](INSTALL.md). 
