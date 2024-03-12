@@ -128,7 +128,5 @@ SSOV+FC-CLIP    |52.92                     |50.58                               
 SSOV+TMP+SAN    |**56.35**                 |**51.75**                            |46.60                             |checkpoint
 
 
-### We will continue to improve.
-
 
 
