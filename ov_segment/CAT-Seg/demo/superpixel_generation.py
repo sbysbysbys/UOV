@@ -185,7 +185,7 @@ if __name__ == "__main__":
     random_select_idx = 0 
     cycle = 1
 
-    # with open("nuscenes_pics.txt", "a")as f:
+
     # for scene_idx in tqdm(range(segments[cuda_num-3], segments[cuda_num-2])):
     for scene_idx in tqdm(range(total_score)):
         scene = nusc.scene[scene_idx]
@@ -196,7 +196,6 @@ if __name__ == "__main__":
                 if random_select_idx == 0:
                     cam = nusc.get("sample_data", current_sample["data"][camera_name])
                     output_file = os.path.join(args.sp_folder, cam["token"] + ".png")
-                    # f.write(os.path.join(nusc.dataroot, cam["filename"])+"\\\\"+output_file+"\n")
                     if not os.path.exists(output_file):
                         compute_catseg(cam, output_file, text_embed_path, text_len)
             random_select_idx += 1 

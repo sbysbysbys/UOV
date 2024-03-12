@@ -7,13 +7,18 @@
 SSOV consists of two stages: Tri-Modal Pre-training (TMP) and Annotation-free training (SSOV-baseline). Both stages leverage masks $M_\mathcal{I}$ and mask labels $L_M$ extracted from 2D open-vocabulary segmentation models, while mask features $F_M$ and text features $F_T$ are employed only in TMP. TMP enhances scene understanding through contrastive losses (superpixel-superpoint contrastive loss and text-superpoint contrastive loss), while our baseline employs pseudo-labels to supervise the 3D network. Additionally, to bridge dataset classes and open vocabularies, we introduce a class dictionary $\mathcal{C}$. The Approximate Flat Interaction (AFI) optimizes the results of annotation-free training by spatial structural analysis in a broad perception domain.
 
 ## Annotation-free segementation demos:
+
+### Demo1:
 <p align="center">
   <img src="./assets/demo.gif" width="80%" />
 </p>
+
+### Demo2:
 <p align="center">
   <img src="./assets/demo2.gif" width="80%" />
 </p>
-Here, training was conducted without using any labels.
+
+### Here, training was conducted without using any labels.
 
 ## Installation
 Please follow [installation](INSTALL.md). 
@@ -131,6 +136,9 @@ SSOV+CAT-Seg    |51.02                     |49.14                               
 SSOV+FC-CLIP    |52.92                     |50.58                                |45.86                             |checkpoint
 SSOV+TMP+SAN    |**56.35**                 |**51.75**                            |46.60                             |checkpoint
 
+## Acknowledgement
+Part of the codebase has been adapted from [SLidR](https://github.com/valeoai/SLidR), [FC-CLIP](https://github.com/bytedance/fc-clip/tree/main), [CAT-Seg](https://github.com/KU-CVLAB/CAT-Seg/tree/main), [SAN](https://github.com/MendelXu/SAN/tree/main), [SEAL](https://github.com/youquanl/Segment-Any-Point-Cloud), thanks!
 
+### We will continuously update, including checkpoints and visualization.
 
 

@@ -62,7 +62,7 @@ class VisualizationDemo(object):
             if "sem_seg" in predictions:
                 vis_output = visualizer.draw_sem_seg(
                     predictions["sem_seg"].argmax(dim=0).to(self.cpu_device),
-                    alpha=0.4, # 透明度
+                    alpha=0.4,
                 )
             if "instances" in predictions:
                 instances = predictions["instances"].to(self.cpu_device)

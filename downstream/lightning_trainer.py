@@ -167,16 +167,16 @@ class LightningDownstream(pl.LightningModule):
         print(m_IoU, fw_IoU)
         self.log("m_IoU", m_IoU, prog_bar=True, logger=True, sync_dist=False)
         self.log("fw_IoU", fw_IoU, prog_bar=True, logger=True, sync_dist=False)
-        # if self.epoch == self.num_epochs - 1:
-        #     self.save()
-        # if self.epoch == self.num_epochs:
-        #     self.save()
-        self.save()
+        if self.epoch == self.num_epochs - 1:
+            self.save()
+        if self.epoch == self.num_epochs:
+            self.save()
 
     @rank_zero_only
     def save(self):
-        path = os.path.join(self.working_dir, str(self.epoch)+"model.pt")
-        print(path)
+        path = os.path.join(self.working_dir, "model.pt")
+        # path = os.path.join(self.working_dir, str(self.epoch)+"model.pt")
+        # print(path)
         torch.save(
             {"model_points": self.model.state_dict(), "config": self._config}, path
         )

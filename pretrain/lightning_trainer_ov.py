@@ -108,7 +108,7 @@ class LightningPretrain(pl.LightningModule):
         pairing_images = batch["pairing_images"]
         pairing_points = batch["pairing_points"]
         images = batch["input_I"]
-        # 计算出每个超像素在批次中的全局索引
+
         superpixels = (
             torch.arange(
                 0,
@@ -119,7 +119,6 @@ class LightningPretrain(pl.LightningModule):
         )
         m = tuple(pairing_images.cpu().T.long())
 
-        # 提取图像和点云的配对索引
         superpixels_I = superpixels.flatten()
         idx_P = torch.arange(pairing_points.shape[0], device=superpixels.device)
         total_pixels = superpixels_I.shape[0]
@@ -142,9 +141,6 @@ class LightningPretrain(pl.LightningModule):
                 (superpixels.shape[0] * self.superpixel_size, total_pixels)
             )
         
-        # 稀疏张量乘法
-        # 将对应点分类计算平均特征，相当于平均池
-        # 不过不想要idx = 0的，需要剔除
         k = one_hot_P @ output_points[pairing_points]
         k = k / (torch.sparse.sum(one_hot_P, 1).to_dense()[:, None] + 1e-6)
         # q = one_hot_I @ output_images.permute(0, 2, 3, 1).flatten(0, 2)
