@@ -6,11 +6,14 @@
 
 SSOV consists of two stages: Tri-Modal Pre-training (TMP) and Annotation-free training (SSOV-baseline). Both stages leverage masks $M_\mathcal{I}$ and mask labels $L_M$ extracted from 2D open-vocabulary segmentation models, while mask features $F_M$ and text features $F_T$ are employed only in TMP. TMP enhances scene understanding through contrastive losses (superpixel-superpoint contrastive loss and text-superpoint contrastive loss), while our baseline employs pseudo-labels to supervise the 3D network. Additionally, to bridge dataset classes and open vocabularies, we introduce a class dictionary $\mathcal{C}$. The Approximate Flat Interaction (AFI) optimizes the results of annotation-free training by spatial structural analysis in a broad perception domain.
 
-## Annotation-free segementation demo:
+## Annotation-free segementation demos:
 <p align="center">
-  <img src="./assets/demo.gif" width="75%" />
+  <img src="./assets/demo.gif" width="80%" />
 </p>
-More demos can be found at [this dir](./assets/demo.gif)
+<p align="center">
+  <img src="./assets/demo2.gif" width="80%" />
+</p>
+
 
 ## Installation
 Please follow [installation](INSTALL.md). 
