@@ -191,3 +191,4 @@ ov_segment/fc-clip/models--laion--CLIP-convnext_large_d_320.laion2B-s29B-b131K-f
 ov_segment/fc-clip/demo/demo.py
 ov_segment/SAN/san_vit_large_14.pth
 restore/
+data/SSOV

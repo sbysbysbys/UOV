@@ -137,8 +137,8 @@ def post_process(point_nn, cfg, pc, output_seg = None, ov_seg = None, text_embed
 def get_arguments():
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config', type=str, default="config/semseg_nuscenes_zeroshot.yaml")
-    parser.add_argument('--sp_folder', type=str, default="data/SLidr/fcclip")
+    parser.add_argument('--cfg_file', type=str)
+    parser.add_argument('--pp_save_path', type=str)
     parser.add_argument('--post_process', type=str)
     parser.add_argument('--dataset', type=str)  # 71.27, 73.95
 
@@ -167,7 +167,7 @@ def get_point_nn(cfg, device):
 
 if __name__ == "__main__":
     args = get_arguments()
-    with open(args.config, 'r') as file:
+    with open(args.cfg_file, 'r') as file:
         cfg = yaml.safe_load(file)
     args_dict = vars(args)
     for arg_name, arg_value in args_dict.items():
@@ -181,9 +181,8 @@ if __name__ == "__main__":
 
     full_predictions = []
     ground_truth = []
-    for root, dirs, files in os.walk(args.sp_folder):
-        # for name in tqdm(files):
-        for name in files:
+    for root, dirs, files in os.walk("../"+cfg["pp_save_path"]):
+        for name in tqdm(files):
             lidar_path = os.path.join(root, name)
             # print(lidar_path)
             pointcloud = torch.tensor(np.load(lidar_path)).unsqueeze(0).to("cuda:"+str(cfg["cuda"]))

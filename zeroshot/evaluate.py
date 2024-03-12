@@ -64,8 +64,7 @@ def evaluate(model, dataloader, config, save=False):
         # if config["post_process"] :
         #     point_nn = get_point_nn(config, device)
 
-        # for batch in tqdm(dataloader):
-        for batch in dataloader:
+        for batch in tqdm(dataloader):
             sparse_input = SparseTensor(batch["sinput_F"], batch["sinput_C"], device=0)
             output_points = model(sparse_input).F
             if config["ignore_index"]:

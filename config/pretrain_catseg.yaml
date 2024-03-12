@@ -1,5 +1,5 @@
 dataset : "nuscenes"
-working_dir : "output/slidr/nuscenes/"
+working_dir : "output/SSOV/nuscenes/"
 
 # catseg
 text_number : 175

@@ -1,11 +1,11 @@
 dataset : "nuscenes"
-working_dir : "output/semseg/nuscenes/"
+working_dir : "output/annotation_free/nuscenes/"
 
 
-superpixels_type : "san"             # 
+superpixels_type : "san"         
 sp_dir : "data/SAN/superpixels/"
 lidarseg_ov_dir : "data/SAN/lidarseg_ov"
-pp_save_path : "data/SLidr/san"
+pp_save_path : "data/SSOV/SAN"
 
 task : "zero-shot"  # finetune
 # task : "finetune"
@@ -82,7 +82,7 @@ normalize_features : False
 
 post_process : True
 if_ovseg : False
-cuda : 2
+cuda : 0
 # params
 beta : 4
 samep_dist : 20

@@ -29,6 +29,7 @@ fvcore
 tabulate
 opencv-python-headless
 numba == 0.58.1
-# pyyaml == 6.0.1
+pyyaml == 6.0.1
 easydict == 1.11
 open_clip_torch == 2.16.0
+typing
