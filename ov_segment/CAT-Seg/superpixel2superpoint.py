@@ -185,7 +185,7 @@ def parse_arguments():
 
     parser = argparse.ArgumentParser(description='superpixel2superpoint')
     parser.add_argument('-r', '--root_folder', help='root folder of dataset',
-                        default='/root/wangfeiyue3new/sby/Segment-Any-Point-Cloud/data/sets/nuscenes')
+                        default='../../data/sets/nuscenes')
     parser.add_argument('-s', '--sp_folder', help='superpixels root', type=str,
                         default='../../data/CAT-Seg/superpixels') 
     parser.add_argument('-l', '--lidarseg_save_folder', help='save lidarseg', type=str,
