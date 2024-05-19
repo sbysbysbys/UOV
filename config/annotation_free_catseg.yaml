@@ -4,7 +4,7 @@ working_dir : "output/annotation_free/nuscenes/"
 superpixels_type : "catseg"
 sp_dir : "data/CAT-Seg/superpixels/"
 lidarseg_ov_dir : "data/CAT-Seg/lidarseg_ov"
-pp_save_path : "data/SSOV/CAT-Seg"
+pp_save_path : "data/UOV/CAT-Seg"
 
 task : "zero-shot"  # finetune
 # task : "finetune"

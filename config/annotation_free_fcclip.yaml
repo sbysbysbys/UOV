@@ -4,7 +4,7 @@ working_dir : "output/annotation_free/nuscenes/"
 superpixels_type : "fcclip"
 sp_dir : "data/fc-clip/superpixels/"
 lidarseg_ov_dir : "data/fc-clip/lidarseg_ov"
-pp_save_path : "data/SSOV/fc-clip"
+pp_save_path : "data/UOV/fc-clip"
 
 task : "zero-shot"  # finetune
 # task : "finetune"

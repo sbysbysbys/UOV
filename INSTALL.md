@@ -2,8 +2,8 @@
 **Step 1.** Install [PyTorch and Torchvision](https://pytorch.org/get-started/previous-versions/)
 
 ```shell
-conda create -n SSOV python=3.9
-conda activate SSOV
+conda create -n UOV python=3.9
+conda activate UOV
 # we use torch.__version__='1.11.0+cu113'
 conda install pytorch==1.11.0 torchvision==0.12.0 cudatoolkit=11.3 -c pytorch
 ``` 

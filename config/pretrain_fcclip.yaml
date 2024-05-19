@@ -1,5 +1,5 @@
 dataset : "nuscenes"
-working_dir : "output/SSOV/nuscenes/"
+working_dir : "output/UOV/nuscenes/"
 
 # fcclip
 text_number : 175

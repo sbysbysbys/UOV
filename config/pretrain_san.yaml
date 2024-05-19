@@ -1,5 +1,5 @@
 dataset : "nuscenes"
-working_dir : "output/SSOV/nuscenes/"
+working_dir : "output/UOV/nuscenes/"
 
 # SAN
 text_number : 175
