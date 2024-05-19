@@ -1,4 +1,4 @@
-# 3D Self-Supervision by Distilling 2D Open-Vocabulary Segmentation Models for Annotation-free Training
+# 3D Unsupervised Learning by Distilling 2D Open-Vocabulary Segmentation Models for Autonomous Driving
 
 ## Overview of the method:
 
