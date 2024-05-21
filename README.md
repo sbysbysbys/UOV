@@ -2,7 +2,7 @@
 
 ## Overview of the method:
 
-![Overview of the method](./assets/method.png)
+![Overview of the method](./assert/method.png)
 
 UOV consists of two stages: Tri-Modal Pre-training (TMP) and Annotation-free training (UOV-baseline). Both stages leverage masks $M_\mathcal{I}$ and mask labels $L_M$ extracted from 2D open-vocabulary segmentation models, while mask features $F_M$ and text features $F_T$ are employed only in TMP. TMP enhances scene understanding through contrastive losses (superpixel-superpoint contrastive loss and text-superpoint contrastive loss), while our baseline employs pseudo-labels to supervise the 3D network. Additionally, to bridge dataset classes and open vocabularies, we introduce a class dictionary $\mathcal{C}$. The Approximate Flat Interaction (AFI) optimizes the results of annotation-free training by spatial structural analysis in a broad perception domain.
 
@@ -10,12 +10,12 @@ UOV consists of two stages: Tri-Modal Pre-training (TMP) and Annotation-free tra
 
 ### Demo1:
 <p align="center">
-  <img src="./assets/demo.gif" width="80%" />
+  <img src="./assert/demo.gif" width="80%" />
 </p>
 
 ### Demo2:
 <p align="center">
-  <img src="./assets/demo2.gif" width="80%" />
+  <img src="./assert/demo2.gif" width="80%" />
 </p>
 
 ### Here, training was conducted without using any labels.
@@ -26,7 +26,7 @@ Please follow [installation](INSTALL.md).
 ## Data Preparation
 Please follow [dataset preperation](DATASETS.md)
 
-## Sueprpixel-superpoint generation
+## Superpixel-superpoint generation
 
 You can choose from the following three open-vocabulary segmentation models:
 
