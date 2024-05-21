@@ -26,7 +26,7 @@ Please follow [installation](INSTALL.md).
 ## Data Preparation
 Please follow [dataset preperation](DATASETS.md)
 
-## Sueprpixel-superpoint generation
+## Superpixel-superpoint generation
 
 You can choose from the following three open-vocabulary segmentation models:
 
