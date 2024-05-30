@@ -72,13 +72,13 @@ def minkunet_collate_pair_fn(list_data):
     images_batch = torch.cat(images, 0).float()
     superpixels_batch = torch.tensor(np.concatenate(superpixels))
     return {
-        "sinput_C": coords_batch,  # 坐标
-        "sinput_F": feats_batch,   # 特征
-        "input_I": images_batch,  # 图像
-        "pairing_points": pairing_points, # 有对齐的点云
-        "pairing_images": pairing_images, # 有对齐的图像
-        "batch_n_pairings": batch_n_pairings, # 有对齐的点云的数量
-        "inverse_indexes": inverse_indexes, # 体素的中心index
+        "sinput_C": coords_batch, 
+        "sinput_F": feats_batch, 
+        "input_I": images_batch, 
+        "pairing_points": pairing_points, 
+        "pairing_images": pairing_images,
+        "batch_n_pairings": batch_n_pairings, 
+        "inverse_indexes": inverse_indexes, 
         "superpixels": superpixels_batch, 
         "features" : features_batch
     }
@@ -340,7 +340,6 @@ class NuScenesMatchDataset(Dataset):
             coords_aug = pc / self.voxel_size
 
         # Voxelization with MinkowskiEngine
-        # 数组在内存中是连续的
         discrete_coords, indexes, inverse_indexes = ME.utils.sparse_quantize(
             coords_aug.contiguous(), return_index=True, return_inverse=True
         )
