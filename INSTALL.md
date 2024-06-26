@@ -8,7 +8,7 @@ conda activate UOV
 conda install pytorch==1.11.0 torchvision==0.12.0 cudatoolkit=11.3 -c pytorch
 ``` 
 
-**Step 2.** Install [Detection2](https://github.com/pytorch/vision/):
+**Step 2.** Install [Detectron2](https://github.com/facebookresearch/detectron2):
 ```
 # python -m pip install 'git+https://github.com/MaureenZOU/detectron2-xyz.git'
 python -m pip install 'git+https://github.com/facebookresearch/detectron2.git@v0.6'
