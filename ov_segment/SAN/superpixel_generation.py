@@ -97,8 +97,8 @@ class Predictor(object):
             config_file (str): the config file path
             model_path (str): the model path
         """
-        device = "cuda:"+str(cuda)
-        # device = "cuda:2"
+        # device = "cuda:"+str(cuda)
+        device = "cuda"
         cfg = setup(config_file, device)
         self.model = DefaultTrainer.build_model(cfg)
         if model_path.startswith("huggingface:"):
