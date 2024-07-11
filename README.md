@@ -45,7 +45,7 @@ Please prepare the checkpoint and other related content according to [FC-CLIP](h
 ```
 # superpixels generation
 cd ov_segment/fc-clip
-python superpixel_generation.py
+python demo/superpixel_generation.py
 # superpoints generation
 python superpixel2superpoint.py
 ```
