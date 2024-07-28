@@ -192,3 +192,5 @@ ov_segment/fc-clip/demo/demo.py
 ov_segment/SAN/san_vit_large_14.pth
 restore/
 data/UOV
+MinkowskiEngine
+data
