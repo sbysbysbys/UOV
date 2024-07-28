@@ -18,7 +18,7 @@ batch_size : 16        # -->16 change here
 # learning rate
 optimizer : 'sgd'
 scheduler : 'cosine'
-lr : 0.02             
+lr : 0.002             
 lr_head : 2.0           
 sgd_momentum : 0.9
 sgd_dampening : 0.1
@@ -31,7 +31,7 @@ num_threads : 4
 # 3D convolution kernel size
 kernel_size : 3
 bn_momentum : 0.02
-bn_momentum : 0.05
+# bn_momentum : 0.05
 crop_size : [224, 416]
 crop_ratio : [1.5555555555555556, 1.8888888888888888]
 # point cloud backbone to use among "minkunet" and "voxelnet"
