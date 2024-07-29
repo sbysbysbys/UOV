@@ -24,7 +24,7 @@ def main():
         "--resume_path", type=str, default=None, help="provide a path to resume an incomplete training"
     )
     parser.add_argument(
-        "--pretraining_path", type=str, default="", help="provide a path to pre-trained weights"
+        "--pretraining_path", type=str, default="minkunet_slidr.pt", help="provide a path to pre-trained weights"
     )
 
     args = parser.parse_args()

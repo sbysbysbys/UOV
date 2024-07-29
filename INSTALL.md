@@ -4,6 +4,14 @@
 ```shell
 conda create -n UOV python=3.9
 conda activate UOV
+
+## Optional: install cuda-11.3 in conda environment
+# Install CUDA Toolkit 11.3.0 in https://developer.nvidia.com/cuda-11.3.0-download-archive
+# conda install cuda -c nvidia/label/cuda-11.3.0 -c nvidia/label/cuda-11.3.1
+# export CUDA_HOME=/usr/local/cuda-11.3
+# export PATH=/usr/local/cuda-11.3/bin$:${PATH}
+# export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64:${LD_LIBRARY_PATH}
+
 # we use torch.__version__='1.11.0+cu113'
 conda install pytorch==1.11.0 torchvision==0.12.0 cudatoolkit=11.3 -c pytorch
 ``` 
