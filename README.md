@@ -119,11 +119,11 @@ We will directly incorporate AFI into the inference pipeline in the future.
 ## Results
 We will release checkpoints here after publication.
 #### Results of annotation-free semantic segementation (% mIoU):
-Method      |nuScenes<br />annotation-free|checkpoint
----         |:-:                          |:-:
-UOV+CAT-Seg|42.83                        |checkpoint
-UOV+FC-CLIP|43.28                        |checkpoint
-UOV+SAN    |**47.73**                    |checkpoint
+Method      |baseline<br />(pretrain with SlidR)|baseline<br />checkpoint | + TMP   |pretrain model<br />checkpoint|annofree after TMP<br />checkpoint|+AFI     
+---         |:-:                                |:-:                      |:-:      |:-:                           |:-:                               |
+UOV+CAT-Seg |38.45                              |checkpoint               |42.50    |checkpoint                    |checkpoint                        |42.83
+UOV+FC-CLIP |39.00                              |checkpoint               |42.44    |checkpoint                    |checkpoint                        |43.28
+UOV+SAN     |**44.16**                          |checkpoint               |**47.42**|checkpoint                    |checkpoint                        |47.73
 
 #### Finetuning for semantic segementation (% mIoU):
 Method          |nuScenes<br />lin. probing|nuScenes<br />Finetuning with 1% data|KITTI<br />Finetuning with 1% data|pretrain checkpoint
@@ -134,7 +134,7 @@ UOV-TMP+FC-CLIP|44.24                     |45.73                                
 UOV-TMP+SAN    |46.29                     |47.60                                |47.72                             |checkpoint
 UOV+CAT-Seg    |51.02                     |49.14                                |47.59                             |checkpoint
 UOV+FC-CLIP    |52.92                     |50.58                                |45.86                             |checkpoint
-UOV+TMP+SAN    |**56.35**                 |**51.75**                            |46.60                             |checkpoint
+UOV+SAN    |**56.35**                 |**51.75**                            |46.60                             |checkpoint
 
 ## Acknowledgement
 Part of the codebase has been adapted from [SLidR](https://github.com/valeoai/SLidR), [FC-CLIP](https://github.com/bytedance/fc-clip/tree/main), [CAT-Seg](https://github.com/KU-CVLAB/CAT-Seg/tree/main), [SAN](https://github.com/MendelXu/SAN/tree/main), [SEAL](https://github.com/youquanl/Segment-Any-Point-Cloud), thanks!
