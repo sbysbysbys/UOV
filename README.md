@@ -123,7 +123,7 @@ Method      |baseline<br />(pretrain with SlidR)|baseline<br />checkpoint | + TM
 ---         |:-:                                |:-:                      |:-:      |:-:                           |:-:                               |
 UOV+CAT-Seg |38.45                              |checkpoint               |42.50    |checkpoint                    |checkpoint                        |42.83
 UOV+FC-CLIP |39.00                              |checkpoint               |42.44    |checkpoint                    |checkpoint                        |43.28
-UOV+SAN     |**44.16**                          |checkpoint               |**47.42**|checkpoint                    |checkpoint                        |47.73
+UOV+SAN     |**44.16**                          |[checkpoint](https://drive.google.com/file/d/1tpwwgBccZCaguKtpCVe32kU8hxPsijoX/view?usp=sharing)             |**47.42**|[checkpoint](https://drive.google.com/file/d/18JpEvYi1XaCXvohZyUbhT6EN5SECGohf/view?usp=sharing)                   |[checkpoint](https://drive.google.com/file/d/1sbqH_O3I_U9bXSVrP_jpUbit5lrTHHEp/view?usp=sharing)                   |47.73
 
 #### Finetuning for semantic segementation (% mIoU):
 Method          |nuScenes<br />lin. probing|nuScenes<br />Finetuning with 1% data|KITTI<br />Finetuning with 1% data|pretrain checkpoint
@@ -131,10 +131,10 @@ Method          |nuScenes<br />lin. probing|nuScenes<br />Finetuning with 1% dat
 Random init.    |8.1                       |30.3                                 |39.5                              |-
 UOV-TMP+CAT-Seg|43.95                     |46.61                                |**48.14**                         |checkpoint
 UOV-TMP+FC-CLIP|44.24                     |45.73                                |47.02                             |checkpoint
-UOV-TMP+SAN    |46.29                     |47.60                                |47.72                             |checkpoint
+UOV-TMP+SAN    |46.29                     |47.60                                |47.72                             |[checkpoint](https://drive.google.com/file/d/18JpEvYi1XaCXvohZyUbhT6EN5SECGohf/view?usp=sharing)
 UOV+CAT-Seg    |51.02                     |49.14                                |47.59                             |checkpoint
 UOV+FC-CLIP    |52.92                     |50.58                                |45.86                             |checkpoint
-UOV+SAN    |**56.35**                 |**51.75**                            |46.60                             |checkpoint
+UOV+SAN    |**56.35**                 |**51.75**                            |46.60                             |[checkpoint](https://drive.google.com/file/d/1TFEzWUrk2z18W_lnddu-WRf1FftnKP48/view?usp=sharing)
 
 ## Acknowledgement
 Part of the codebase has been adapted from [SLidR](https://github.com/valeoai/SLidR), [FC-CLIP](https://github.com/bytedance/fc-clip/tree/main), [CAT-Seg](https://github.com/KU-CVLAB/CAT-Seg/tree/main), [SAN](https://github.com/MendelXu/SAN/tree/main), [SEAL](https://github.com/youquanl/Segment-Any-Point-Cloud), thanks!
