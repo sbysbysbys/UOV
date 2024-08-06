@@ -119,11 +119,11 @@ We will directly incorporate AFI into the inference pipeline in the future.
 ## Results
 We will release checkpoints here after publication.
 #### Results of annotation-free semantic segementation (% mIoU):
-Method      |baseline<br />(pretrain with SlidR)|baseline<br />checkpoint | + TMP   |pretrain model<br />checkpoint|annofree after TMP<br />checkpoint|+AFI     
----         |:-:                                |:-:                      |:-:      |:-:                           |:-:                               |
-UOV+CAT-Seg |38.45                              |checkpoint               |42.50    |checkpoint                    |checkpoint                        |42.83
-UOV+FC-CLIP |39.00                              |checkpoint               |42.44    |checkpoint                    |checkpoint                        |43.28
-UOV+SAN     |**44.16**                          |[checkpoint](https://drive.google.com/file/d/1tpwwgBccZCaguKtpCVe32kU8hxPsijoX/view?usp=sharing)             |**47.42**|[checkpoint](https://drive.google.com/file/d/18JpEvYi1XaCXvohZyUbhT6EN5SECGohf/view?usp=sharing)                   |[checkpoint](https://drive.google.com/file/d/1sbqH_O3I_U9bXSVrP_jpUbit5lrTHHEp/view?usp=sharing)                   |47.73
+Method      |baseline<br />(pretrain with SlidR)|baseline<br />checkpoint                                                                        | + TMP   |pretrain model<br />checkpoint                                        |annofree after TMP<br />checkpoint                                                              |+AFI     
+---         |:-:                                |:-:                                                                                             |:-:      |:-:                                                                   |:-:                               |
+UOV+CAT-Seg |38.45                              |checkpoint                                                                                      |42.50    |checkpoint                                                            |checkpoint                                                                                      |42.83
+UOV+FC-CLIP |39.00                              |checkpoint                                                                                      |42.44    |checkpoint                                                            |checkpoint                                                                                      |43.28
+UOV+SAN     |**44.16**                          |[checkpoint](https://drive.google.com/file/d/1tpwwgBccZCaguKtpCVe32kU8hxPsijoX/view?usp=sharing)|**47.42**|[checkpoint](https://drive.google.com/file/d/18JpEvYi1XaCXvohZyUbhT6EN5SECGohf/view?usp=sharing)|[checkpoint](https://drive.google.com/file/d/1sbqH_O3I_U9bXSVrP_jpUbit5lrTHHEp/view?usp=sharing)|47.73
 
 #### Finetuning for semantic segementation (% mIoU):
 Method          |nuScenes<br />lin. probing|nuScenes<br />Finetuning with 1% data|KITTI<br />Finetuning with 1% data|pretrain checkpoint
